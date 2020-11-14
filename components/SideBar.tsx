@@ -1,13 +1,18 @@
+import React from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 import { device } from '../lib'
 import { SocialLink } from '../components'
-import React from 'react'
 
 export const SideBar = () => {
   return (
     <Wrapper>
       <StickyContainer>
-        <Title>fumihumi</Title>
+        <Title>
+          <Link href="/">
+            fumihumi
+          </Link>
+        </Title>
         <Description>WIP: 工事中</Description>
         <Logos>
           <SocialLink type="hatena" />
@@ -56,6 +61,15 @@ const Wrapper = styled.aside`
 const Title = styled.h1`
   font-size: 2.5rem;
   color: ${({ theme }) => theme.colors.primary};
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      /* NOTE: Override visited link style */
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
 `
 
 const Description = styled.p`
