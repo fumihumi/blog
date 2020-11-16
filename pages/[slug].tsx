@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from "react-markdown";
 import { Layout, CodeBlock } from '../components'
 import styled from 'styled-components';
-
+import 'github-markdown-css/github-markdown.css'
 
 type Props = {
   content: string;
@@ -19,7 +19,7 @@ type Props = {
 const Blog: NextPage<Props> = ({ content, data: { title, description, slug, date } }) => {
   return (
     <Layout title={title} description={description}>
-      <Main>
+      <Main className="markdown-body">
         <ReactMarkdown
           source={content}
           renderers={{ code: CodeBlock }}
