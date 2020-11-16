@@ -54,4 +54,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Main = styled.main`
   padding: 2rem;
+
+  h1:before { content: "# " }
+  h2:before { content: "## " }
+  h3:before { content: "### " }
+  h4:before { content: "#### " }
+  h5:before { content: "##### " }
+  h6:before { content: "###### " }
+  h1,h2,h3,h4,h5,h6 {
+    color: ${({ theme }) => theme.colors.primary};
+
+    &::before { font-size: .8em; }
+  }
 `
