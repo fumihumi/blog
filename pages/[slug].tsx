@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from "react-markdown";
 import { Layout, CodeBlock } from '../components'
 import styled from 'styled-components';
-
+import 'github-markdown-css/github-markdown.css'
 
 type Props = {
   content: string;
@@ -19,7 +19,7 @@ type Props = {
 const Blog: NextPage<Props> = ({ content, data: { title, description, slug, date } }) => {
   return (
     <Layout title={title} description={description}>
-      <Main>
+      <Main className="markdown-body">
         <ReactMarkdown
           source={content}
           renderers={{ code: CodeBlock }}
@@ -54,4 +54,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Main = styled.main`
   padding: 2rem;
+
+  h1:before { content: "# " }
+  h2:before { content: "## " }
+  h3:before { content: "### " }
+  h4:before { content: "#### " }
+  h5:before { content: "##### " }
+  h6:before { content: "###### " }
+  h1,h2,h3,h4,h5,h6 {
+    color: ${({ theme }) => theme.colors.primary};
+
+    &::before { font-size: .8em; }
+  }
 `
