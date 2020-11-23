@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { device } from '../lib'
 import { SocialLink } from '../components'
 
-export const SideBar: React.FC = () => {
+export const SideBar = () => {
   return (
     <Wrapper>
       <StickyContainer>

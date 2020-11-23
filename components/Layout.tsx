@@ -5,19 +5,7 @@ import { device } from '../lib'
 import { useRouter } from 'next/router'
 
 const SITE_TITLE = "fumihumi's blog"
-
-type Props = {
-  title: string,
-  description: string
-}
-
-export const Layout: React.FC<Props> = ({ title, description, children }) => {
-  console.log(`
-    Thank you for coming to 'fumihumi.me'
-    こんなところをついつい覗いちゃうアナタへ。
-    バグ報告はコチラへ: https://github.com/fumihumi/blog/issues/new お願いします！
-  `)
-
+export const Layout = ({ title, description, children }) => {
   const router = useRouter();
 
   return (
@@ -41,7 +29,7 @@ export const Layout: React.FC<Props> = ({ title, description, children }) => {
 }
 
 
-const MetaHeader: React.FC<Props> = ({ title, description }) => (
+const MetaHeader = ({ title, description }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charSet="utf-8" />
