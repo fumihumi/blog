@@ -12,6 +12,12 @@ type Props = {
 }
 
 export const Layout: React.FC<Props> = ({ title, description, children }) => {
+  console.log(`
+    Thank you for coming to 'fumihumi.me'
+    こんなところをついつい覗いちゃうアナタへ。
+    バグ報告はコチラへ: https://github.com/fumihumi/blog/issues/new お願いします！
+  `)
+
   const router = useRouter();
 
   return (
