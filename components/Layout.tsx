@@ -5,7 +5,13 @@ import { device } from '../lib'
 import { useRouter } from 'next/router'
 
 const SITE_TITLE = "fumihumi's blog"
-export const Layout = ({ title, description, children }) => {
+
+type Props = {
+  title: string,
+  description: string
+}
+
+export const Layout: React.FC<Props> = ({ title, description, children }) => {
   const router = useRouter();
 
   return (
@@ -29,7 +35,7 @@ export const Layout = ({ title, description, children }) => {
 }
 
 
-const MetaHeader = ({ title, description }) => (
+const MetaHeader: React.FC<Props> = ({ title, description }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charSet="utf-8" />

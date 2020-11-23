@@ -5,7 +5,7 @@ const files = {
   hatena: {
     filename: 'hatena.svg',
     url: 'https://fumihumi.hatenablog.com/',
-    service: 'hatenanblog'
+    service: 'hatenablog'
   },
   twitter: {
     filename: 'twitter.png',

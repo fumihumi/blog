@@ -36,7 +36,7 @@ const theme = {
   },
 } as const
 
-
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -51,6 +51,7 @@ export default function App({ Component, pageProps }) {
 type AppTheme = typeof theme
 // NOTE: https://github.com/styled-components/styled-components/issues/1589#issuecomment-456641381
 declare module 'styled-components' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends AppTheme { }
 }
 
