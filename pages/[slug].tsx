@@ -25,7 +25,7 @@ const Blog: NextPage<Props> = ({ content, data: { title, description, slug, date
         <ReactMarkdown
           source={content}
           renderers={{ code: CodeBlock }}
-          escapeHtml
+          allowDangerousHtml
         />
       </Main>
     </Layout>
