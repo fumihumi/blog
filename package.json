@@ -6,7 +6,8 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint components/**/*.{ts,tsx} lib/**/*.ts pages/*.tsx"
+    "lint": "eslint components/**/*.{ts,tsx} lib/**/*.ts pages/*.tsx",
+    "updates:npm-packages": "git checkout -b ncu_`date +%Y%m%d` && ncu -i"
   },
   "dependencies": {
     "github-markdown-css": "^4.0.0",
