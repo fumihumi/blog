@@ -16,6 +16,8 @@ type Props = {
   }
 };
 
+// TODO:
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Blog: NextPage<Props> = ({ content, data: { title, description, slug, date } }) => {
   return (
     <Layout title={title} description={description}>
