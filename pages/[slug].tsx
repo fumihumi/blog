@@ -20,7 +20,7 @@ type Props = {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Blog: NextPage<Props> = ({ content, data: { title, description, slug, date } }) => {
   return (
-    <Layout title={title} description={description}>
+    <Layout title={title} description={description} slug={slug}>
       <Main className="markdown-body">
         <ReactMarkdown
           source={content}
