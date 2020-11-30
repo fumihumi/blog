@@ -53,14 +53,15 @@ const MetaHeader: React.FC<Props> = ({ title, description }) => (
 const Wrapper = styled.div`
   display: --webkit-flex;
   display: flex;
-  width: 100vw;
 
   @media ${device.mobileS} {
     flex-direction: column;
+    width: 100vw;
   }
 
   @media ${device.tablet} {
     flex-direction: row;
+    width: 80vw;
   }
 `
 
