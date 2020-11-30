@@ -13,7 +13,7 @@ export const SideBar: React.FC = () => {
             fumihumi
           </Link>
         </Title>
-        <Description>WIP: 工事中</Description>
+        <Description>技術的なことだったり、非技術的なことだったりを雑多に書いていく予定です。</Description>
         <Logos>
           <SocialLink type="hatena" />
           <SocialLink type="scrapbox" />
