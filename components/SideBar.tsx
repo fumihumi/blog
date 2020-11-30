@@ -64,6 +64,7 @@ const Title = styled.h1`
 
   a {
     text-decoration: none;
+    color: ${({ theme }) => theme.colors.primary};
 
     &:visited {
       /* NOTE: Override visited link style */
