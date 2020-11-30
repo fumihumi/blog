@@ -5,7 +5,7 @@ import { BlogList, Layout } from '../components'
 
 type Props = { data: string[]; title: string; description: string }
 
-const MyApp = ({ data, title, description }: Props) => {
+const MyApp: React.FC<Props> = ({ data, title, description }) => {
   const blogs = data.map(blog => matter(blog)).map(item => item.data)
 
   return (
@@ -29,7 +29,7 @@ const MyApp = ({ data, title, description }: Props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const siteData = await import("../config.json")
-  const fs = require("fs")
+  const fs = await import("fs")
 
   const files = fs.readdirSync(`${process.cwd()}/content`, "utf-8")
   const blogs = files.filter(fn => fn.endsWith(".md"))
