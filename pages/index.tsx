@@ -32,7 +32,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const fs = await import("fs")
 
   const files = fs.readdirSync(`${process.cwd()}/content`, "utf-8")
-  const blogs = files.filter(fn => fn.endsWith(".md"))
+  // TODO: 非公開の記事とかできるようにいい感じにする
+  const blogs = files.filter(fn => fn !== 'markdown-sample.md' && fn.endsWith(".md"))
   const data = blogs.map(blog => {
     const path = `${process.cwd()}/content/${blog}`;
     const rawContent = fs.readFileSync(path, { encoding: "utf-8" })
