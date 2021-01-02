@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import { device } from '../lib'
+import { device, pagesPath } from '../lib'
 import { SocialLink } from '../components'
 
 export const SideBar: React.FC = () => {
@@ -9,7 +9,7 @@ export const SideBar: React.FC = () => {
     <Wrapper>
       <StickyContainer>
         <Title>
-          <Link href="/">
+          <Link href={pagesPath.$url()}>
             fumihumi
           </Link>
         </Title>

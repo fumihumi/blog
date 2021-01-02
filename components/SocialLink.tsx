@@ -1,24 +1,25 @@
 import Image from 'next/image'
 import styled from 'styled-components'
+import { staticPath } from '../lib'
 
 const files = {
   hatena: {
-    filename: 'hatena.svg',
+    filename: staticPath.socials.hatena_svg,
     url: 'https://fumihumi.hatenablog.com/',
     service: 'hatenablog'
   },
   twitter: {
-    filename: 'twitter.png',
+    filename: staticPath.socials.twitter_png,
     url: 'https://twitter.com/_fumihumi',
     service: 'Twitter'
   },
   github: {
-    filename: 'github.svg',
+    filename: staticPath.socials.github_svg,
     url: 'https://github.com/fumihumi',
     service: 'GitHub'
   },
   scrapbox: {
-    filename: 'scrapbox.svg',
+    filename: staticPath.socials.scrapbox_svg,
     url: 'https://scrapbox.io/fumihumi/',
     service: 'Scrapbox'
   }
@@ -35,7 +36,7 @@ const SocialLink: React.FC<Props> = ({ type }) => {
 
     <Link href={url} target="_blank">
       <Image
-        src={`/socials/${filename}`}
+        src={filename}
         alt={`fumihumi's social link for ${service}`}
         width={ImageSize}
         height={ImageSize}
