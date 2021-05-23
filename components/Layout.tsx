@@ -80,5 +80,5 @@ const Wrapper = styled.div`
 const Parent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: calc(100% - 2rem)
 `
